@@ -20,7 +20,15 @@ public class CheckUtilsTest {
 ////        Assert.assertEquals(CheckUtils.isEmpty(2),false);
 ////        Assert.assertEquals(CheckUtils.isEmpty(((null),true);
 //        Assert.assertArrayEquals(CheckUtils.isEmpty("vj "),true);
-        Assert.assertEquals(CheckUtils.isEmpty({"ndfhull","好吧"}),true);
+//        Assert.assertEquals(CheckUtils.isEmpty(arr:{1,"都会",null,0}),true);
+//        Assert.assertEquals(CheckUtils.isEmpty(Object{1,"都会",null,0}),true);
+        Assert.assertEquals(true,CheckUtils.isEmpty(new Object[]{1, "都会", null, 0}));
+        Assert.assertEquals(false,CheckUtils.isEmpty(new Object[]{1, "都会"}));
+        Assert.assertEquals(false,CheckUtils.isEmpty(new Object[]{1, "都会",""}));
+        Assert.assertEquals(true,CheckUtils.isEmpty(new Object[]{1, "都会", null}));
+        Assert.assertEquals(true,CheckUtils.isEmpty(new Object[]{1, "都会", " "}));
+        Assert.assertEquals(false,CheckUtils.isEmpty(new Object[]{1, "都会",0}));
+
 
     }
 

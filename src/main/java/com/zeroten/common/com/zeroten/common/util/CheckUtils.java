@@ -19,9 +19,12 @@ public class CheckUtils {
 //   2. public static boolean isEmpty(Object[] arr) 判断引⽤类型数组是否为空，
 //    为空或 null 则返回 true，否则返回 false。
         public static boolean isEmpty(Object[] arr) {
-            String str2 = arr.toString();
-            for (int i = 0; i < str2.length(); i++){
-                if ((arr[i] == null) || (arr[i] == "")){
+//            for (int i = 0; i < arr.length(); i++){
+//                if ((arr[i] == null) || (arr[i] == "")){
+//                    return true;
+//                }
+            for (Object num : arr){
+                if ((num == null)||(num == " ")){
                     return true;
                 }
             }
